@@ -1,1 +1,23 @@
-<h1>蔡紫旻的 blog</h1>
+---
+layout: default
+title: Zimin Cai (蔡紫旻) - 知与行
+---
+
+<div id="home">
+  <h1>blog</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <h1>wiki</h1>
+  <ul class="posts">
+  </ul>
+
+  <h1>prominent open source projects</h1>
+  <ul class="posts">
+    <li><a href="http://github.com/github/gollum/">Gollum:</a> A simple, Git-powered wiki with a sweet API and local frontend.</li>
+    <li><a href="http://github.com/mojombo/jekyll/">Jekyll:</a> A simple, blog aware, static site generator (used for this site).</li>
+  </ul>
+</div>
